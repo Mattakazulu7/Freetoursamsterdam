@@ -1,0 +1,73 @@
+.left-banner {
+    position: fixed;
+    top: 150px;
+    left: 5px;
+    width: 430px;
+    height: calc(109vh - 340px);
+   background-color: rgba(0, 0, 0, 0.2); /* White color with 80% transparency */
+    
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items to the top */
+}
+
+.left-banner .banner-image {
+    width: 100%;
+    height: auto; /* Change to auto to maintain aspect ratio */
+    opacity: 1;
+}
+
+.left-banner .tour-description {
+    color: white;
+    font-weight: bold; /* Increase font weight */
+    text-align: center; /* Center align text */
+}
+}
+#logsContainer {
+    color: white; /* Set text color to white */
+}
+
+#statusMessageContainer {
+    color: white; /* Set text color to white */
+}
+
+.pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    color: #990000;
+    left: 100px;
+}
+
+#tour-info {
+    font-weight: bold; /* Increase font weight */
+    /* You can adjust the font weight value as needed */
+    font-size: 30px; /* Increase font size */
+     text-indent: 20px; /* Add indentation */
+    
+}
+
+/* Laptop-specific positioning */
+@media (min-width: 1024px) {
+    .left-banner {
+        left: 50px; /* Adjust left positioning for laptops */
+        width: 1000px; /* Increase width for laptops */
+    }
+
+    .left-banner .tour-description {
+        font-size: 18px; /* Adjust font size for laptops */
+    }
+
+    #tour-info {
+        font-size: 36px; /* Increase font size for laptops */
+    }
+}
+

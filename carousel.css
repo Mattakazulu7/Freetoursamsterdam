@@ -1,0 +1,35 @@
+.carousel-container {
+    position: relative;
+    top: -190px; /* Adjust to fit below the header */
+    left: 800px; /* Position the carousel container on the right side */
+    width: 50%; /* Set the width of the carousel container */
+    height: 50%;
+    overflow: hidden;
+    z-index: 999; /* Set carousel behind other content */
+    transition: transform 0.3s ease; /* Add transition effect for smooth scaling */
+}
+
+.carousel-container:hover {
+/*transform: scale(3); Enlarge by a factor of 3 on hover */
+ /*top: 240px;  Shift the position downwards on hover */ 
+    
+   
+
+}
+
+.slideshow {
+    display: flex;
+    flex-direction: column; /* Display images in a column layout */
+    align-items: center; /* Center-align images horizontally */
+    width: 100%;
+    height: 100%; /* Ensure the slideshow takes up the entire space */
+}
+
+.slideshow img {
+    max-width: 7%; /*Ensures the image width does not exceed the container width */
+    height: auto; /* Let the height adjust automatically */
+    max-height: calc(100vh - 140px); /* Adjust to fit between the header and footer */
+    object-fit: contain; /* Fit the image inside the container while preserving aspect ratio */
+    border: 2px solid #990000;
+}
+

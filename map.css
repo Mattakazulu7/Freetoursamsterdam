@@ -1,0 +1,20 @@
+.map-container {
+    position: absolute;
+    top: 150px;
+    left: 10px;
+   
+    bottom: 450px; /* Height of the footer */
+    
+    right: 1290px;;
+    z-index: -1; /* Set the z-index to a lower value to position it furthest back */
+    opacity: 0;
+    
+}
+
+.map {
+    width: calc(213% - 200px); /* Adjust width considering the left banner */
+    height: 200%;
+    border: 2px solid #990000; /* Add border with color #990000 */
+    
+}
+

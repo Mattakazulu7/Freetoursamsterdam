@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amsterdam's Free Tours</title>
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <link rel="stylesheet" type="text/css" href="tour.css">
+    <link rel="stylesheet" type="text/css" href="carousel.css">
+    <link rel="stylesheet" type="text/css" href="miscellaneous.css">
+    <link rel="stylesheet" type="text/css" href="greenpanel.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="tourtext.css">
+    <link rel="stylesheet" type="text/css" href="video.css">
+    <link rel="stylesheet" href="font-awesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <script src="thumbnails.js"></script>
+    <script src="bookingform.js"></script>
+    <script src="slideshow.js"></script>
+    <script src="buttons.js"></script>
+    <script src="FAQs.js"></script>
+    
+</head>
+<body>
+    <header>
+        <img src="silhouettered.jpg" alt="Silhouette" class="header-background">
+        <div class="header-content">
+            <img src="logo.png" alt="Logo" class="logo-image"> <!-- Added image here -->
+        
+            <h1 class="pirata-one-regular">Amsterdam's Free Tours</h1>
+            <nav>
+                <a href="https://linktr.ee/deepsouthonline" id="suggestions-btn">Suggestions</a>
+                <a href="#">Shop</a>
+                <a href="#" id="FAQs-btn">FAQs</a>
+                <a href="#">Leave a review</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="aerial-view-of-amsterdam-narrow-canals-SBV-334692928-preview (2).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+        <div class="map-container">
+            <img src="smallmap.png" alt="Map of Amsterdam" class="map">
+           
+        </div>
+         <div class="tour-images">
+            <a href="#" target="_blank" class="clickme-link">
+                <img src="clickme.jpg" alt="Click Me" class="clickme-image">
+            </a>
+                <a  target="_blank">
+                    <div class="tour-image" data-label="Canal Tour">
+                        <img src="pirateship.jpg" alt="Tour 1" class="tour-thumbnail">
+                        <div class="tour-overlay">
+                            Book Now
+                        </div>
+                    </div>
+                </a>
+                <a  target="_blank">
+                    <div class="tour-image" data-label="Red Light Tour">
+                        <img src="girlinred.png" alt="Tour 2" class="tour-thumbnail">
+                        <div class="tour-overlay">
+                            Book Now
+                        </div>
+                    </div>
+                </a>
+                <a  target="_blank">
+                    <div class="tour-image" data-label="City Tour">
+                        <img src="hallroyal.jpg" alt="Tour 3" class="tour-thumbnail">
+                        <div class="tour-overlay">
+                            Book Now
+                        </div>
+                    </div>
+                </a>
+                <a  target="_blank">
+                    <div class="tour-image" data-label="Bike Tour">
+                        <img src="flowerbike.jpg" alt="Tour 4" class="tour-thumbnail">
+                        <div class="tour-overlay">
+                            Book Now
+                        </div>
+                    </div>
+                </a>
+                <a  target="_blank">
+                    <div class="tour-image" data-label="Art Tour">
+                        <img src="painter.jpg" alt="Tour 5" class="tour-thumbnail">
+                        <div class="tour-overlay">
+                            Book Now
+                        </div>
+                    </div>
+                </a>
+            </div>
+       
+  <!-- Left Banner -->
+  <div class="left-banner" id="tour-info">Discover the best tours in Amsterdam by clciking on the images on the right. Free Tours Amsterdam offers an immersive journey through the vibrant streets and rich history of this iconic city. Led by knowledgeable guides passionate about sharing Amsterdam's tales, visitors embark on an adventure that unveils hidden gems, iconic landmarks, and local secrets. From the historic canals to the cultural hubs, each tour promises an unforgettable experience, blending insightful commentary with the freedom to explore at your own pace. Whether it's your first visit or a return to familiar streets, Free Tours Amsterdam invites you to discover the heart and soul of this enchanting destination, all while fostering a sense of community and connection.</div>
+  
+
+        <div>
+            <button class="tour-link" data-text="Tour 1">Tour 1</button>
+            <button class="tour-link" data-text="Tour 2">Tour 2</button>
+            <button class="tour-link" data-text="Tour 3">Tour 3</button>
+            <button class="tour-link" data-text="Tour 4">Tour 4</button>
+            <button class="tour-link" data-text="Tour 5">Tour 5</button>
+        </div>
+        
+        <div id="logsContainer"></div>
+        <div id="statusMessageContainer"></div>
+    </div> 
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+</html>

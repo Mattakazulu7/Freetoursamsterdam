@@ -1,0 +1,184 @@
+.tour-images {
+    position: relative;
+    top: 0;
+    left: 0;
+     z-index: 1;
+}
+
+
+.clickme-link {
+    position: fixed;
+    top: 30px;
+    left: 560px;
+    z-index: 9999;
+}
+
+.clickme-image {
+    width: 60px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+}
+
+.tour-image {
+    width: 120px; /* adjust size as needed */
+    height: 120px; /* adjust size as needed */
+    border: 2px solid #990000;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    
+}
+
+.tour-thumbnail {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tour-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #990000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tour-image:hover .tour-overlay {
+    opacity: 1;
+}
+.tour-image:hover {
+    transform: scale(1.5);
+}
+
+.tour-image:hover .left-banner {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tour-image::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tour-image:hover::after {
+    opacity: 1;
+}
+
+main div button
+{
+    top: 720px;
+    display: inline-block;
+    background-color: #485041;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative; /* Ensure it has a positioning context */
+    z-index: 3; /* Ensure it appears above other content */
+}
+.tour-link {
+    display: inline-block;
+    background-color: #485041;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative; /* Ensure it has a positioning context */
+    z-index: 2; /* Ensure it appears above other content */
+}
+.tour-link:hover {
+    background-color: #cc0000;
+}
+
+.tour-image[data-label="Canal Tour"] {
+    position: fixed;
+    top: 0px;
+    left: 257px;
+}
+
+.tour-image[data-label="Red Light Tour"] {
+    position: fixed;
+    top: 125px;
+    left: 257px;
+}
+
+.tour-image[data-label="City Tour"] {
+    position: fixed;
+    top: 420px;
+    left: 257px;
+}
+
+.tour-image[data-label="Bike Tour"] {
+    position: fixed;
+    top: 270px;
+    left: 257px;
+}
+
+.tour-image[data-label="Art Tour"] {
+    position: fixed;
+    top: 570px;
+    left: 257px;
+}
+
+
+.tour-image::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 1; /* Change opacity to 1 */
+}
+
+.tour-image:hover::after {
+    opacity: 1; /* Ensure opacity remains 1 on hover */
+}
+/* Laptop-specific positioning */
+@media only screen and (min-width: 1024px) {
+    .tour-image[data-label="Canal Tour"] {
+        left: 600px; /* Adjust the left position */
+        top: 0px;
+    }
+
+    .tour-image[data-label="Red Light Tour"] {
+        left: 800px; /* Adjust the left position */
+        top: 0px;
+    }
+
+    .tour-image[data-label="City Tour"] {
+        left: 1000px; /* Adjust the left position */
+        top: 0px;
+    }
+
+    .tour-image[data-label="Bike Tour"] {
+        left: 1200px; /* Adjust the left position */
+        top: 0px;
+    }
+
+    .tour-image[data-label="Art Tour"] {
+        left: 1400px; /* Adjust the left position */
+        top: 0px;
+    }
+}
+
+

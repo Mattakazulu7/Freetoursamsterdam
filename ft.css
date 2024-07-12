@@ -1,0 +1,335 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #7a332f;
+}
+
+header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensure header stays above other content */
+}
+
+h1 {
+    font-family: 'Pirata', cursive;
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #485041;
+}
+
+nav a:hover {
+    background-color: #cc0000;
+}
+
+.map-container {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 1; /* Ensure map container stays above carousel */
+}
+
+.map {
+    width: 130%;
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tour-images {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.tour-image {
+    width: 70px; /* adjust size as needed */
+    height: 70px; /* adjust size as needed */
+    border: 2px solid gold;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    
+}
+
+.tour-thumbnail {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tour-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tour-image:hover .tour-overlay {
+    opacity: 1;
+}
+.tour-image:hover {
+    transform: scale(1.5);
+}
+
+.tour-image:hover .left-banner {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tour-image::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tour-image:hover::after {
+    opacity: 1;
+}
+
+.tour-link {
+    display: inline-block;
+    background-color: #485041;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.tour-link:hover {
+    background-color: #cc0000;
+}
+
+.tour-image[data-label="Tour 1"] {
+    position: absolute;
+    top: -140px;
+    left: 830px;
+}
+
+.tour-image[data-label="Tour 2"] {
+    position: absolute;
+    top: -280px;
+    left: 790px;
+}
+
+.tour-image[data-label="Tour 3"] {
+    position: absolute;
+    top: -400px;
+    left: 850px;
+}
+
+.tour-image[data-label="Tour 4"] {
+    position: absolute;
+    top: -510px;
+    left: 643px;
+}
+
+.tour-image[data-label="Tour 5"] {
+    position: absolute;
+    top: -330px;
+    left: 1080px;
+}
+
+.tour-image::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 1; /* Change opacity to 1 */
+}
+
+.tour-image:hover::after {
+    opacity: 1; /* Ensure opacity remains 1 on hover */
+}
+.carousel-container {
+    position: fixed;
+    top: 179px; /* Adjust to fit below the header */
+    right: 0; /* Position the carousel container on the right side */
+    bottom: 158px; /* Adjust to fit above the footer */
+    width: 28%; /* Set the width of the carousel container */
+    overflow: hidden;
+    z-index: 0; /* Set carousel behind other content */
+    border: 5px solid gold; /* Add a gold border around the container */
+}
+.slideshow {
+    display: flex;
+    flex-direction: column; /* Display images in a column layout */
+    align-items: center; /* Center-align images horizontally */
+    width: 100%;
+    height: 100%; /* Ensure the slideshow takes up the entire space */
+}
+
+.slideshow img {
+    max-width: 150%; /* Ensure the image width does not exceed the container width */
+    height: auto; /* Let the height adjust automatically */
+    max-height: calc(100vh - 140px); /* Adjust to fit between the header and footer */
+    object-fit: contain; /* Fit the image inside the container while preserving aspect ratio */
+}
+.left-banner {
+    position: fixed;
+    top: 180px;
+    bottom: 240px;
+    left: 0;
+    width: 475px; /* Adjust width as needed */
+    height: 65.4vh; /* Set height to 100% of viewport height */
+    background-color: black; /* Background color of the left banner */
+    z-index: 1; /* Ensure it stays above other content */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+    opacity: 1;
+    visibility: visible;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 10px inset gold; /* Gold border inset from the margins */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.left-banner img {
+    width: 40%; /* Ensure the image fills the container */
+    height: 100%; /* Set image height to 100% of parent container */
+    object-fit: cover; /* Optional: cover entire container without stretching */
+    position: center;
+    opacity: 1;
+}
+
+#logsContainer {
+    color: white; /* Set text color to white */
+}
+
+#statusMessageContainer {
+    color: white; /* Set text color to white */
+}
+
+.pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    color: red;
+}
+footer {
+    background-color: #485041; /* Set background color */
+    color: #fff; /* Set text color */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add padding to provide some space */
+    position: fixed; /* Fix the footer to the bottom of the viewport */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Make the footer stretch across the entire viewport */
+    z-index: 2; /* Ensure footer stays above other content */
+}
+/* Styling for the green panel */
+.green-panel {
+    background-color: #4CAF50; /* Green color */
+    position: fixed;
+    bottom: 40px; /* Adjust to fit above the footer */
+    left: 50%; /* Move it to the horizontal center */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 25%; /* Set its width to 50% of the viewport width */
+    height: 22vh; /* Set its height to 25% of the viewport height */
+    padding: 2px 0; /* Adjust padding as needed */
+    display: none; /* Initially hidden */
+    text-align: center;
+    z-index: 9999; /* Ensure it's above other content */
+    border-radius: 15px; /* Rounded edges */
+}
+/* Styling for the form inside the green panel */
+.booking-form {
+    /* Add your form styles here */
+    max-width: 300px; /* Example maximum width */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: white; /* White background for the form */
+    padding: 2px; /* Add padding as needed */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+.booking-form h2 {
+    margin-top: 0; /* Remove default margin for the heading */
+}
+
+.booking-form label {
+    display: block; /* Labels display on their own line */
+    margin-bottom: 1px; /* Add space below each label */
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+    width: 100%; /* Make form elements full width */
+    padding: 1px; /* Add padding as needed */
+    margin-bottom: 1px; /* Add space between form elements */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.booking-form button {
+    background-color: #4CAF50; /* Green color */
+    color: white; /* White text color */
+    border: none; /* Remove default button border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.booking-form button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+.booking-form .phone-container {
+    display: flex;
+}
+
+.booking-form .phone-container select {
+    flex: 1; /* Take up available space */
+    margin-right: 5px; /* Add some spacing between the select and input */
+}
+
+.booking-form .phone-container input {
+    flex: 2; /* Take up available space */
+}
+
+.booking-form .phone-container::before {
+    content: '+';
+    padding: 0 5px; /* Adjust as needed */
+}
+/* Styling for the tour description */
+.tour-description {
+    display: block; /* Make it display as a block element */
+    margin-top: 10px; /* Add space above the tour description */
+    font-style: italic; /* Italicize the tour description */
+    color: #333; /* Darker text color for better readability */
+}

@@ -1,0 +1,21 @@
+/* CSS for tour text */
+.tour-text {
+  list-style-type: disc; /* Use bullets */
+  margin-left: 20px; /* Indent bullets */
+  color: red; /* Make text red */
+}
+
+/* CSS for tour description */
+.tour-description {
+  list-style-type: disc; /* Use bullets */
+  margin-left: 20px; /* Indent bullets */
+  color: red; /* Make text red */
+}
+
+/* CSS for about text */
+#abouttext {
+  /* Add your styles for the about text here */
+  font-weight: bold; /* Example style */
+  font-size: 40px; /* Example style */
+  
+}

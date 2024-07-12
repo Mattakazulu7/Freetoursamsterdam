@@ -1,0 +1,11 @@
+footer {
+    background-color: #485041; /* Set background color */
+    color: #fff; /* Set text color */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add padding to provide some space */
+    position: fixed; /* Fix the footer to the bottom of the viewport */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Make the footer stretch across the entire viewport */
+    z-index: 1; /* Ensure footer stays above other content */
+}

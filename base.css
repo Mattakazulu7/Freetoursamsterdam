@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #FFFFFF;
+}
+header {
+    position: relative; /* Position the header relatively to hold the absolutely positioned image */
+    color: #fff; /* Set text color to white for better visibility */
+    padding: 100px 0; /* Increase top and bottom padding as needed */
+    text-align: center; /* Center the text horizontally */
+    overflow: hidden; /* Hide overflow of the image */
+}
+
+.header-background {
+    position: absolute; /* Position the image absolutely */
+    top: 85px;
+    left: 2203px;
+    width: 30%; /* Let the image stretch horizontally */
+    height: 100%; /* Increase the height of the header background */
+    z-index: -2; /* Move the image behind the content */
+    background-color: rgba(255, 255, 255, 0.7); /* Smokey white background color */
+    transform: translateY(-50%); /* Center the image vertically */
+}
+
+.header-content {
+    position: absolute; /* Make the content positioned relative to allow z-index */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 10px;
+    top: 10px;
+}
+h1 {
+    font-family: 'Pirata', cursive;
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #485041;
+}
+
+nav a:hover {
+    background-color: #cc0000;
+}
+.logo-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1%;
+    margin: 2px; /* Adjust margin as needed */
+    z-index: 9999; /* Ensure it's above other content */
+}

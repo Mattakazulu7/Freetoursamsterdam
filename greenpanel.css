@@ -1,0 +1,90 @@
+/* Styling for the green panel */
+.green-panel {
+    background-color: #4CAF50; /* Green color */
+    position: relative;
+    top: 70px; /* Position it vertically at 50% from the top */
+    left: 10px; /* Position it horizontally 10% from the left */
+    transform: translateY(-50%); /* Center it vertically */
+    width: 20%; /* Set its width to 25% of the viewport width */
+    
+    padding: 25px 0; /* Adjust padding as needed */
+    display: none; /* Initially hidden */
+    text-align: center;
+    z-index: 9999; /* Ensure it's above other content */
+    border-radius: 15px; /* Rounded edges */
+}
+
+
+/* Styling for the form inside the green panel */
+.booking-form {
+    /* Add your form styles here */
+    max-width: 280px; /* Example maximum width */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: white; /* White background for the form */
+    padding: 2px; /* Add padding as needed */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+.booking-form h2 {
+    margin-top: 0; /* Remove default margin for the heading */
+}
+
+.booking-form label {
+    display: block; /* Labels display on their own line */
+    margin-bottom: 1px; /* Add space below each label */
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+    width: 100%; /* Make form elements full width */
+    padding: 1px; /* Add padding as needed */
+    margin-bottom: 1px; /* Add space between form elements */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.booking-form button {
+    background-color: #4CAF50; /* Green color */
+    color: white; /* White text color */
+    border: none; /* Remove default button border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.booking-form button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+.booking-form .phone-container {
+    display: flex;
+}
+
+.booking-form .phone-container select {
+    flex: 1; /* Take up available space */
+    margin-right: 5px; /* Add some spacing between the select and input */
+}
+
+.booking-form .phone-container input {
+    flex: 2; /* Take up available space */
+}
+
+.booking-form .phone-container::before {
+    content: '+';
+    padding: 0 5px; /* Adjust as needed */
+}
+/* Styling for the tour description */
+.tour-description {
+    display: block; /* Make it display as a block element */
+    margin-top: 10px; /* Add space above the tour description */
+    font-style: italic; /* Italicize the tour description */
+    color: #333; /* Darker text color for better readability */
+}
+/* Styling for the close icon */
+.close-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
